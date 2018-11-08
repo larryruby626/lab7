@@ -103,7 +103,11 @@ public class MainActivity1 extends AppCompatActivity {
                 double cal_bodyFat=0;
                 if (gender==1){
                     cal_standardWeight =22*cal_Tall/100*cal_Tall/100;
-                    cal_bodyFat = (cal_weight-(0.82*cal_standardWeight)/cal_weight*100);
+                    cal_bodyFat = (cal_weight-(0.88*cal_standardWeight))/cal_weight*100;
+                }
+                if(gender==2){
+                    cal_standardWeight =22*cal_Tall/100*cal_Tall/100;
+                    cal_bodyFat = (cal_weight-(0.82*cal_standardWeight))/cal_weight*100;
                 }
                 standardWeight.setText(String.format("%.2f",cal_standardWeight));
                 bodyFat.setText(String.format("%.2f",cal_bodyFat));
